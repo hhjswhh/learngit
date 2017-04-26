@@ -56,3 +56,20 @@ git remote  查看远程库的信息  -v 显示详细信息
 如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，
 用命令git branch --set-upstream branch-name origin/branch-name。
 这就是多人协作的工作模式，一旦熟悉了，就非常简单。
+
+git tag v1.0  给当前分支打标签
+git tag  查看所有标签
+git tag v0.9 6224937  对某一特定commit打标签，即可对过去打标签
+git show v0.9  查看标签详细信息
+git tag -a v0.1  -m "version 0.1 released" 3628164  -a表示标签名 -m表示说明
+git tag -d v0.1  删除标签
+git push origin v1.0  标签推送到远程，默认不自动推送到远程
+git push origin --tags  一次推送全部尚未推送到远程的本地标签
+git push origin :refs/tags/v0.9
+
+在GitHub上，可以任意Fork开源仓库；
+自己拥有Fork后的仓库的读写权限；
+可以推送pull request给官方仓库来贡献代码。
+
+在Git工作区的根目录下创建一个特殊的.gitignore文件，能忽略特殊文件
+git config --global alias.st status  给命令配置别名
