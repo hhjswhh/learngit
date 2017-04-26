@@ -1,0 +1,3 @@
+hello
+this is my first git file
+I'm trying to put it in to git
